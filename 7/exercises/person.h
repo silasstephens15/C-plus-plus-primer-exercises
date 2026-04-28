@@ -3,8 +3,9 @@
 
 using std::string;
 
-class Person {
-public:
+struct Person {
+  Person() = default;
+  Person(const string &n, const string &a) : name(n), address(a){};
   string name;
   string address;
   string getName() const { return name; };
